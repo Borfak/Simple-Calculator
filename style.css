@@ -1,0 +1,125 @@
+body {
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container {
+    max-width: 400px;
+    width: 100%;
+    margin: 10vh auto 0 auto;
+    box-shadow: 0 0 43px 17px rgba(153, 153, 153, 0.5);
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+    
+}
+
+#display {              
+    text-align: right;
+    height: 70px;
+    line-height: 70px;
+    padding: 16px 8px;
+    overflow-x: scroll;
+    font-size: 25px;
+    border: none;
+}
+
+input {
+    color: transparent;
+    text-shadow: 0 0 0 black;
+  }
+
+#display:focus {
+    border-color: transparent !important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: none;
+}
+
+
+#display::-webkit-scrollbar {
+    display: none;
+}
+
+#display::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+#display::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+#display::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}   
+
+#display:hover {
+    overflow-x: auto;
+    cursor: pointer;
+}
+
+::selection { background: transparent; } ::-moz-selection { background: transparent; }
+
+.buttons {
+    display: grid;
+    border-bottom: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.buttons > div {
+    border-right: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    padding: 16px 0;
+    text-align: center;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.button {
+    background-color: #f1f1f1;
+}
+
+#equal {
+    background-color: #6117ec;
+    color: white;
+}
+
+.button:hover {
+    background-color: #dddddd;
+    transition: 0.3s ease-in-out;
+}
+
+#equal:hover {
+    background-color: #4f0acf;
+    transition: 0.3s ease-in-out;
+}
+
+.textWrapper {
+    position: relative;
+    font-size: 80px;
+    margin-left: 170px;
+    text-transform: uppercase;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+span {
+    position: relative;
+    display: inline-block;
+    color: #4f0acf;
+    animation: waveAnim 1s infinite;
+    animation-delay: calc(.1s * var(--i));
+}
+
+@keyframes waveAnim {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
